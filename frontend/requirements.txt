@@ -1,0 +1,3 @@
+axios
+-D tailwindcss @tailwindcss/vite
+react-router-dom
