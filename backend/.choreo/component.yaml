@@ -9,3 +9,8 @@ endpoints:
       networkVisibilities:
         - Project
         - Public
+
+dependencies:
+    connectionReferences:
+    - name: groq-connection
+      resourceRef: thirdparty:grok/v1
