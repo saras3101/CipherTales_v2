@@ -10,7 +10,7 @@ function LoadingStatus({theme}) {
             <div className='spinner'></div>
         </div>
 
-        <p className='loading info'>
+        <p className='loading-info'>
             Please wait while we generate your story...
         </p>
       
