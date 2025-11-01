@@ -96,6 +96,14 @@ button:hover {
 .tagline{
   font-size: 5vh ;
 }
+@media (max-width: 600px) {
+  .tag {
+    font-size: 2rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
+}
 .theme-input-container h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -359,6 +367,7 @@ button:hover {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #eee;
 }
