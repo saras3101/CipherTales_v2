@@ -2,8 +2,8 @@ import React from 'react'
 
 function LoadingStatus({theme}) {
   return (
-    <div>
-        <h2 className='loading-container'>
+    <div className='loading-container'>
+        <h2 >
             Generating Your {theme} Story
         </h2>
         <div className='loading-animation'>
