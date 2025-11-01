@@ -16,12 +16,11 @@ class StoryGenerator:
 
     @classmethod
     def _get_llm(cls):
-        groq_api_key = os.getenv("APIKey")
-        serviceurl = os.getenv("CHOREO_GROQ_CONNECTION_SERVICEURL")
+        groq_api_key = os.getenv("GROQ_API_KEY")
+        serviceurl = os.getenv("GROQ_BASE_URL", "https://api.groq.com")
         if not groq_api_key:
-            groq_api_key = os.getenv("GROQ_API_KEY")
-        if not serviceurl:
-            serviceurl = "https://api.groq.com/openai/v1"
+            raise ValueError("Groq API key missing! Set GROQ_API_KEY or OPENAI_API_KEY in your .env")
+        
         
         return ChatGroq(
             model="llama-3.3-70b-versatile",
