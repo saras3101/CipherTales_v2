@@ -71,8 +71,7 @@ function StoryGenerator() {
     const fetchStory = async (id) => {
         try {
             setLoading(false)
-            setJobStatus("completed")
-            await axios.get(`${API_BASE_URL}/stories/${id}/complete`);
+            setJobStatus("completed")            
             navigate(`/story/${id}`)
         } catch (e) {
             setError(`Failed to load story: ${e.message}`)
