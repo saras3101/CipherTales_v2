@@ -50,7 +50,7 @@ function StoryGenerator() {
 
     const pollJobStatus = async (id) => {
         try {
-            const response = await axios.get(`/api/jobs/${id}`) 
+            const response = await axios.get(`${API_BASE_URL}/jobs/${id}`);
             const {status, story_id, error: jobError} = response.data
             setJobStatus(status)
 
@@ -72,6 +72,7 @@ function StoryGenerator() {
         try {
             setLoading(false)
             setJobStatus("completed")
+            await axios.get(`${API_BASE_URL}/stories/${id}/complete`);
             navigate(`/story/${id}`)
         } catch (e) {
             setError(`Failed to load story: ${e.message}`)
